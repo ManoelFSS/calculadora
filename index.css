@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    outline: none;
+}
+
+body {
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 207, 207);
+}
+
+.containner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    position: relative;
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 300px;
+    position: relative;
+    z-index: 2;
+    border-radius:16px 16px 0px 0px;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 0px 3px 15px 1px #00000071;
+    color: aliceblue;
+    font-size: 24px;
+    gap: 5px;
+    
+}
+
+.btns_area{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    background-color: rgb(46, 46, 46);
+    border-radius: 0px 0px 16px 16px;
+    top: 0px;
+    box-shadow: 0px 3px 6px 1px #00000071, inset 0px 0px 16px 6px #000;
+    transition: all 0.6s;
+    padding: 20px;
+    gap: 10px;
+    border-radius:0px 0px 16px 16px;
+}
+
+.teclas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 50px;
+    gap: 20px;
+}
+
+
+
+.btns_area .btn {
+    position: relative;
+    color: aliceblue;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    font-weight: bolder;
+    border: solid 4px rgba(206, 35, 35, 0.575);
+    box-shadow: 1px 2px 6px 2px #000;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 3px;
+
+}
+
+.btns_area .btn:hover {
+    border: solid 4px rgb(255, 0, 0);
+}
+
+.formula{
+    position: absolute;
+    top: 20px;
+    font-size: 40px;
+}
+
+.resultado{
+    position: absolute;
+    bottom: 20px;
+}
