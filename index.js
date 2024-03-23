@@ -22,7 +22,7 @@ opera.forEach((opera)=>{
         const display = document.querySelector(".display .formula")
        
         if(!type){
-            display.innerText += e.target.innerText
+            display.innerText += e.target.innerText === "." ? "0." : e.target.innerText
             type = true
         }
     })
