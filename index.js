@@ -20,9 +20,9 @@ btn.forEach((btn)=>{
 opera.forEach((opera)=>{
     opera.addEventListener("click", (e)=>{
         const display = document.querySelector(".display .formula")
-       
+        console.log(display.innerText)
         if(!type){
-            display.innerText += e.target.innerText === "." ? "0." : e.target.innerText
+            display.innerText += e.target.innerText === "." ? "0." : display.innerText === "" ? "0" + e.target.innerText : e.target.innerText
             type = true
         }
     })
