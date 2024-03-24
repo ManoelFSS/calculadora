@@ -6,6 +6,7 @@ const opera = document.querySelectorAll(".opera")
 const acao = document.querySelector(".acao")
 const clear = document.querySelector(".clear")
 const esc = document.querySelector(".esc")
+const aspas = document.querySelectorAll(".aspas")
 
 let type = false;
 let cursor = false;
@@ -29,6 +30,25 @@ btn.forEach((btn)=>{
 })
 
 
+aspas.forEach((aspas)=>{
+    aspas.addEventListener("click", (e)=>{
+        const display = document.querySelector(".display .formula")
+        display.classList.remove("ativo")
+
+        if(display.innerText === "|" ){
+           display.innerText =  "" 
+        }
+
+        if(!type){
+            display.innerText += e.target.innerText 
+            type = true
+        }
+    })
+})
+
+
+
+
 opera.forEach((opera)=>{
     opera.addEventListener("click", (e)=>{
         const display = document.querySelector(".display .formula")
@@ -39,8 +59,7 @@ opera.forEach((opera)=>{
         }
 
         if(!type){
-           
-            display.innerText += display.innerText === "." ? "0." + e.target.innerText : e.target.innerText
+            display.innerText += e.target.innerText 
             type = true
         }
     })
